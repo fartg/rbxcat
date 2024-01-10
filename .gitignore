@@ -1,0 +1,9 @@
+# Project place file
+/framework.rbxlx
+
+# Roblox Studio lock files
+/*.rbxlx.lock
+/*.rbxl.lock
+
+#  API keys
+/src/ServerStorage/rbxcat/Modules/Misc/Secrets.lua
