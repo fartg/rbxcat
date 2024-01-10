@@ -1,6 +1,9 @@
 
-# rbxcat - roblox client access tunnel
-# introduction
+![rhdbardhbard](https://github.com/fartg/rbxcat/assets/70608092/fa5aeffd-5673-46ca-b6a9-f9d67f19add7)
+<p align="center">
+<h1 align="center">rbxcat - roblox client access tunnel</h1>
+<h1 align="center">introduction</h1>
+</p>
 Using attributes can be a pain.
 With the rbxcat game framework, we use that same painful system to run our games off of! ^_^
 
@@ -30,7 +33,7 @@ local EditPlayer = require(game.ServerStorage.rbxcat.Modules.Functions.EditPlaye
 EditPlayer.Inventory(player, "money", 0);
 ```
 
-# tutorial
+<h1 align="center"> tutorial </h1>
 Let's do something simple, like adding $1 to every player's money every second.
 
 First off, we're going to want every player to have money, right? Let's go ahead and edit our base variables to have a "money" variable.
@@ -172,7 +175,7 @@ end)
 Now if you click play and followed every step correctly, this should be the outcome!
 ![RobloxStudioBeta_AUuwDB2xwT](https://github.com/fartg/rbxcat/assets/70608092/fdfd3d15-e840-4b5e-9553-4f9dfe7fc81f)
 
-# rojo
+<h1 align="center"> rojo </h1>
 
 ```bash
 rojo build -o "framework.rbxlx"
