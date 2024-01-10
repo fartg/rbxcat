@@ -32,6 +32,13 @@ local EditPlayer = require(game.ServerStorage.rbxcat.Modules.Functions.EditPlaye
 ...
 EditPlayer.Inventory(player, "money", 0);
 ```
+<h1 align="center"> installation </h1>
+
+You can download the .rbxm from our release page, or from roblox directly.
+
+https://create.roblox.com/marketplace/asset/15938514509/rbxcat%3Fkeyword=&pageNumber=&pagePosition=
+
+You can also scroll down to the bottom of the page to start your own project with the power of Rojo.
 
 <h1 align="center"> tutorial </h1>
 Let's do something simple, like adding $1 to every player's money every second.
