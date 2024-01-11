@@ -21,9 +21,7 @@ game.Players.PlayerAdded:Connect(function(player)
         if not success then print('json error'); end;
 
         for i, v in pairs(Module.commands) do
-            print(i);
             if i == response.event then
-                print('found')
                 v.func(response.arguments);
                 return
             end
