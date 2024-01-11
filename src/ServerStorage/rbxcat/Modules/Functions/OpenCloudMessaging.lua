@@ -20,18 +20,29 @@ module.commands = {
     ["message"] = {
         func = function(arguments)
             ClientEvents.SystemMessage:FireAllClients(arguments.message, arguments.type);
-            return true;
+            return {true, "sent"};
         end;
     },
     ["findplayer"] = {
         func = function(arguments) 
             for _, player in pairs(game.Players:GetPlayers()) do
                 if player.Name == tostring(arguments.player) then
-                    return true
+                    return {true, player.Name}
                 end
             end
-            return false;
+            return {false};
         end
+    },
+    ["listplayers"] = {
+        func = function()
+            local players = {};
+
+            for _, player in pairs(game.Players:GetPlayers()) do
+                table.insert(players, player.Name);
+            end;
+
+            return {true, players};
+        end;
     }
 }
 
@@ -44,12 +55,8 @@ module.SendToServer = function(data)
     local success, response = pcall(function()
         return httpService:PostAsync(Secrets["webserver"] .. "servefrom", httpService:JSONEncode(data), Enum.HttpContentType.ApplicationJson, false, {["authorization"] = Secrets["api_key"]});
     end)
-    if success then
-        return httpService:JSONDecode(response);
-    end
-    if not success then
-        print(response);
-    end
+
+    return success
 end
 
 return module;
