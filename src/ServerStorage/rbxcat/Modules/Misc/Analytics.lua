@@ -4,6 +4,7 @@ local httpService = game:GetService("HttpService")
 local _settings = require(script.Parent.AnalyticsSettings);
 local secrets = require(script.Parent.Secrets);
 local EditServer = require(game.ServerStorage.rbxcat.Modules.Functions.EditServer);
+local Promise = require(game.ServerStorage.rbxcat.Modules.Misc.Promise);
 
 function generatePlayerData(player, data)
 	local _player = game.ServerStorage.Players:WaitForChild(player.UserId);
@@ -61,8 +62,7 @@ end
 
 function sendAnalytics(_type, data)
 	local success, response = pcall(function()
-		local request = httpService:PostAsync(secrets["webserver"] .. _type, httpService:JSONEncode(data), Enum.HttpContentType.ApplicationJson, false, {["authorization"] = secrets["api_key"]});
-		return request
+			return httpService:PostAsync(secrets["webserver"] .. _type, httpService:JSONEncode(data), Enum.HttpContentType.ApplicationJson, false, {["authorization"] = secrets["api_key"]});
 	end)
 	if success then
 		return httpService:JSONDecode(response);
@@ -75,8 +75,15 @@ end;
 
 analytics.server = function (data)
 	if data.event == "open" then
-		local response = sendAnalytics("server", requestServerId());
-		EditServer.Self("server_id", response["server_id"]);
+
+		local success, response = Promise.new(function(resolve, reject, onCancel)
+			local r = sendAnalytics("server", requestServerId());
+			resolve(r);
+		end):await();
+		
+		if not success then print(response) return end;
+		
+		EditServer.Self("server_id", response["server_id"])
 	end
 
 	return sendAnalytics("server", generateServerData(data));
