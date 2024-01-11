@@ -26,7 +26,6 @@ game.Players.PlayerAdded:Connect(function(player)
                 return
             end
         end
-        print(response.event);
     end)
 
     player.AncestryChanged:Connect(function()
