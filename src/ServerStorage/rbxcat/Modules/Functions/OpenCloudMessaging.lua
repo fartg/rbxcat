@@ -7,14 +7,13 @@ local Config = require(game.ServerStorage.rbxcat.Config);
 
 local ClientEvents = game.ReplicatedStorage.Events.Client;
 
-
 local module = {};
 
 module.commands = {
     ["forceupdate"] = {
         func = function()
             Analytics.server({["event"] = "update"});
-            return true;
+            return {true, "sent"};
         end,
     },
     ["message"] = {
@@ -42,7 +41,7 @@ module.commands = {
             end;
 
             return {true, players};
-        end;
+        end
     }
 }
 

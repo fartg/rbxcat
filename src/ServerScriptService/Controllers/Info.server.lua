@@ -1,4 +1,4 @@
--- If you're looking for PlayerReady, it's handled in game.ServerScriptService.Main & game.StarterPlayer.StarterPlayerScripts.Framework.Ready
+-- If you're looking for PlayerReady, it's handled in game.ServerScriptService.rbxcat.Players & game.StarterPlayer.StarterPlayerScripts.rbxcat.Ready
 
 local EditPlayer = require(game.ServerStorage.rbxcat.Modules.Functions.EditPlayer);
 local EditServer = require(game.ServerStorage.rbxcat.Modules.Functions.EditServer);
