@@ -8,10 +8,20 @@ local p = {}
 
 p.Info = {
 	["pass"] = { 
-		
+		["vip"] = {
+			ID = 637419997,
+			run = function(player)
+				EditPlayer.Player(player, "vip", true);
+			end,
+		},
 	},
 	["product"] = {
-		
+		["tiny_gems"] = {
+			ID = 1675608473,
+			run = function(player)
+				--MoneyHandler.Give(player, 500);
+			end,
+		},
 	}
 }
 
