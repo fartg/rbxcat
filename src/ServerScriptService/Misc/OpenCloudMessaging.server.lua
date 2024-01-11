@@ -22,7 +22,11 @@ game.Players.PlayerAdded:Connect(function(player)
 
         for i, v in pairs(Module.commands) do
             if i == response.event then
-                v.func(response.arguments);
+                local ran = v.func(response.arguments);
+
+                if ran == true then
+                    Module.SendToServer(response);
+                end
                 return
             end
         end
