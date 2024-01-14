@@ -16,7 +16,7 @@ game.Players.PlayerAdded:Connect(function(player)
 	
 	analytics.player(player, {["event"] = "join"});
 
-	analytics.server({["event"] = "update",});
+	analytics.server({["event"] = "update"});
 end)
 
 MarketplaceService.PromptGamePassPurchaseFinished:Connect(function(player, purchasedPassID, purchaseSuccess)

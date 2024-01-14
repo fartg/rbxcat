@@ -13,7 +13,7 @@ module.commands = {
     ["forceupdate"] = {
         func = function()
             Analytics.server({["event"] = "update"});
-            return {true, "sent"};
+            return {true, "updated"};
         end,
     },
     ["message"] = {
@@ -21,16 +21,6 @@ module.commands = {
             ClientEvents.SystemMessage:FireAllClients(arguments.message, arguments.type);
             return {true, "sent"};
         end;
-    },
-    ["findplayer"] = {
-        func = function(arguments) 
-            for _, player in pairs(game.Players:GetPlayers()) do
-                if player.Name == tostring(arguments.player) then
-                    return {true, player.Name}
-                end
-            end
-            return {false};
-        end
     },
     ["listplayers"] = {
         func = function()

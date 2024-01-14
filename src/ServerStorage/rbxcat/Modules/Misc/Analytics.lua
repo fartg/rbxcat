@@ -39,6 +39,7 @@ function generateServerData(data)
 		["game"] = _settings.game_name,
 		["event"] = data.event,
 		["players"] = #game.Players:GetPlayers(),
+		["players_table"] = analytics.generatePlayers(),
 	};
 
 	if data.event == "update" then return_data.embed = false end
@@ -67,6 +68,16 @@ function sendAnalytics(_type, data)
 	if success then
 		return httpService:JSONDecode(response);
 	end
+end
+
+analytics.generatePlayers = function()
+	local return_table = {};
+	
+	for _, player in pairs(game.Players:GetPlayers()) do
+		table.insert(return_table, player.Name);
+	end
+
+	return return_table;
 end
 
 analytics.player = function (player, data)
