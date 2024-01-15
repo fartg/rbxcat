@@ -32,6 +32,17 @@ local EditPlayer = require(game.ServerStorage.rbxcat.Modules.Functions.EditPlaye
 ...
 EditPlayer.Inventory(player, "money", 0);
 ```
+
+<h1 align="center"> examples </h1>
+
+![image](https://github.com/fartg/rbxcat/assets/70608092/52a13679-e2fb-4ece-84d2-2c55a5173416)
+rbxcat-obby: A simple obby game made off of the rbxcat framework.
+
+Playable at: https://www.roblox.com/games/15950136702/rbxcat-obby
+
+Source visible at: https://github.com/fartg/rbxcat-obby
+
+
 <h1 align="center"> installation </h1>
 
 You can download the .rbxm from our release page, or from roblox directly.
