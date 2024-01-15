@@ -208,11 +208,11 @@ rojo serve
 <h1 align="center"> Special Thanks </h1>
 A special thank you to:
 
-1. @oh (moral support, code-auditing and being an all around swell guy)
+1. [@oh](https://github.com/oh) (moral support, code-auditing and being an all around swell guy)
 
 2. [Leah](https://www.roblox.com/users/129180189/profile) (moral support, co-developing and hosting everything!)
 
-4. @evaera (for making the wonderful roblox Promise implementation!)
+4. [@evaera](https://github.com/evaera) (for making the wonderful roblox Promise implementation!)
 
 6. You! for making all of this possible :)
 
