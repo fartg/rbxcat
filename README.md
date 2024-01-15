@@ -33,6 +33,38 @@ local EditPlayer = require(game.ServerStorage.rbxcat.Modules.Functions.EditPlaye
 EditPlayer.Inventory(player, "money", 0);
 ```
 
+<h1 align="center"> included modules </h1>
+The current included modules inside of rbxcat as as follows:
+
+```bash
+|   Config.lua [note: change things in here]
+|
+\---Modules
+    |   Variables.lua
+    |
+    +---Functions
+    |       Datastore.lua [note: set up yourself if you'd like to have more subfolders]
+    |       EditPlayer.lua
+    |       EditServer.lua
+    |       OpenCloudMessaging.lua [note: Set up at your own risk!]
+    |       PlayerFunctions.lua
+    |       Variables.lua
+    |
+    +---Info
+    |       Admin.lua [note: make sure to change to your teams' UserIds]
+    |       Badges.lua [note: make sure to add your own badgeIds]
+    |       BaseVariables.lua
+    |       Purchases.lua [note: make sure to change to your purchaseIds]
+    |       Rewards.lua [note: make sure to add your own rewards]
+    |
+    \---Misc
+            Analytics.lua [note: this will be made way more useful when rbxcat-server gets published]
+            AnalyticsSettings.lua
+            Promise.lua [note: thank you to the lovely @evaera!]
+            Secrets.lua [note: make your own]
+```
+
+
 <h1 align="center"> examples </h1>
 
 ![image](https://github.com/fartg/rbxcat/assets/70608092/52a13679-e2fb-4ece-84d2-2c55a5173416)
