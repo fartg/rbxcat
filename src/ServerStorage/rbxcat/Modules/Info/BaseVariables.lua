@@ -1,5 +1,11 @@
 local bv = {}
 
+bv.Overview = {
+	"Inventory",
+	"Stats",
+	"Settings"
+}
+
 bv.Inventory = {
 	money = 0,
 }

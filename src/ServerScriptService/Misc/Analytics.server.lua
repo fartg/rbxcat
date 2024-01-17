@@ -11,12 +11,18 @@ local products = Purchases.Info.product;
 
 analytics.server({["event"] = "open"});
 
+local update_coroutine = coroutine.create(function()
+	while task.wait(30) do
+		analytics.server({["event"] = "update"});
+	end
+end)
+
+local success, result = coroutine.resume(update_coroutine);
+
 game.Players.PlayerAdded:Connect(function(player)
 	repeat wait() until EditPlayer.Return(player, nil, "device_type") ~= nil and EditPlayer.Return(player, nil, "device_type") ~= "None"; -- we want the device for analytics
 	
 	analytics.player(player, {["event"] = "join"});
-
-	analytics.server({["event"] = "update"});
 end)
 
 MarketplaceService.PromptGamePassPurchaseFinished:Connect(function(player, purchasedPassID, purchaseSuccess)
@@ -54,8 +60,6 @@ end)
 
 game.Players.PlayerRemoving:Connect(function(player)
 	analytics.player(player, {["event"] = "leave"});
-	
-	analytics.server({["event"] = "update"});
 end)
 
 game:BindToClose(function()

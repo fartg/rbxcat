@@ -32,7 +32,16 @@ module.commands = {
 
             return {true, players};
         end
-    }
+    },
+    ["returnplayer"] = {
+        func = function(arguments)
+            local player = game.Players:FindFirstChild(arguments.player);
+
+            local analytics = Analytics.playerData(player)
+
+            return {true, analytics};
+        end
+    },
 }
 
 module.SendToServer = function(data)

@@ -32,6 +32,7 @@ local server_id = EditServer.Return("server_id");
     local success, response = pcall(function()
         return httpService:JSONDecode(message.Data);
     end)
+    print('message received: ', message.Data);
 
     if not success then print('json error'); end;
 

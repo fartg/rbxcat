@@ -1,3 +1,7 @@
 {
-    "ClassName": "Folder"
+    "ClassName": "Folder",
+    "attributes": {
+        "version": "v0.0.0",
+        "server_id": "None"
+    }
 }
