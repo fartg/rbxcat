@@ -76,6 +76,7 @@ function generateServerData(data)
 	local return_data = {
 		["embed"] = _settings.show_server_embeds,
 		["server_id"] = server:GetAttribute("server_id"),
+		["rbx_ocm_alias"] = secrets["rbx_ocm_alias"],
 		["game"] = _settings.game_name,
 		["event"] = data.event,
 		["players"] = analytics.generatePlayers()

@@ -6,7 +6,7 @@ TextChatService.OnIncomingMessage = function(message: TextChatMessage)
 
 	local _player = game.ReplicatedStorage.Players:FindFirstChild(message.TextSource.UserId);
 
-	if AdminEvents.CheckAdmin:InvokeServer() then
+	if AdminEvents.IsAdmin:InvokeServer(message.TextSource) then
 		local props = Instance.new("TextChatMessageProperties");
 		props.PrefixText = "<font color='#FF0000'>[A]</font> " .. message.PrefixText
 		return props

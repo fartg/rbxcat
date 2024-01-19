@@ -42,6 +42,7 @@ local server_id = EditServer.Return("server_id");
 
             if ran[1] == true then
                 response["response"] = ran[2];
+                response["status"] = "done";
 
                 Module.SendToServer(response);
                 end
