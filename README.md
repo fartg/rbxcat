@@ -2,8 +2,18 @@
 ![rhdbardhbard](https://github.com/fartg/rbxcat/assets/70608092/fa5aeffd-5673-46ca-b6a9-f9d67f19add7)
 <p align="center">
 <h1 align="center">rbxcat - roblox client access tunnel</h1>
+
+<h2 align="center"> Now compatible with rbxcat-server! </h2>
+
+See our Analytics and OpenCloudMessaging modules and want to take advantage? Now you can!
+
+Head to [rbxcat-server](https://github.com/lostmedia/rbxcat-server) and follow the installation instructions.
+
+(Make sure to change your Secrets.lua to include your webserver and rbx_ocm_apikey!)
+
+Enjoy connecting to and from ROBLOX game servers with the power of rbxcat and rbxcat-server!
+
 <h1 align="center">introduction</h1>
-</p>
 Using attributes can be a pain.
 With the rbxcat game framework, we use that same painful system to run our games off of! ^_^
 
