@@ -13,13 +13,13 @@ module.commands = {
     ["forceupdate"] = {
         func = function()
             Analytics.server({["event"] = "update"});
-            return {true, "updated"};
+            return {true, "Updated"};
         end,
     },
     ["message"] = {
         func = function(arguments)
             ClientEvents.SystemMessage:FireAllClients(arguments.message, arguments.type);
-            return {true, "sent"};
+            return {true, "Sent"};
         end;
     },
     ["listplayers"] = {
@@ -40,6 +40,23 @@ module.commands = {
             local analytics = Analytics.playerData(player)
 
             return {true, analytics};
+        end
+    },
+    ["kick"] = {
+        func = function(arguments)
+            local player = game.Players:FindFirstChild(arguments.player);
+
+            player:Kick(arguments.message);
+            
+            return {true, "Kicked"}
+        end
+    },
+    ["shutdown"] = {
+        func = function(arguments)
+            for _, player in pairs(game.Players:GetPlayers()) do
+                player:Kick(arguments.message);
+            end
+            return {true, "Shutdown"}
         end
     },
 }
