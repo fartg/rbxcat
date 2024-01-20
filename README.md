@@ -1,6 +1,6 @@
 
-![rhdbardhbard](https://github.com/fartg/rbxcat/assets/70608092/fa5aeffd-5673-46ca-b6a9-f9d67f19add7)
-<p align="center">
+![rbxcat](https://github.com/fartg/rbxcat/assets/70608092/25ca86f6-afdd-4b45-9835-56cb7b229779)
+
 <h1 align="center">rbxcat - roblox client access tunnel</h1>
 
 <h2 align="center"> Now compatible with rbxcat-server! </h2>
