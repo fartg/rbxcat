@@ -85,6 +85,14 @@ Playable at: https://www.roblox.com/games/15950136702/rbxcat-obby
 Source visible at: https://github.com/fartg/rbxcat-obby
 
 
+
+![image](https://github.com/fartg/rbxcat-minigames/assets/70608092/1617529b-9acc-4be7-8d10-b701ed072b2a)
+rbxcat-minigames: An intermediate introduction into rbxcat programming with a minigames place.
+
+Playable at: https://www.roblox.com/games/16172741119/rbxcat-minigames
+
+Source visible at: https://github.com/fartg/rbxcat-minigames
+
 <h1 align="center"> installation </h1>
 
 You can download the .rbxm from our release page, or from roblox directly.
